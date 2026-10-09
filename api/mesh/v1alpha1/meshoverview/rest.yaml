@@ -39,6 +39,18 @@ components:
     MeshOverviewWithMeta:
       allOf:
         - $ref: '/specs/base/specs/common/resource.yaml#/components/schemas/Meta'
+        - type: object
+          properties:
+            creationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was created
+            modificationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was updated
         - $ref: '/specs/protoresources/meshoverview/schema.yaml#/components/schemas/MeshOverview'
 
   responses:

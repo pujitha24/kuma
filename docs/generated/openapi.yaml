@@ -16178,6 +16178,18 @@ components:
     DataplaneOverviewWithMeta:
       allOf:
         - $ref: '#/components/schemas/Meta'
+        - type: object
+          properties:
+            creationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was created
+            modificationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was updated
         - $ref: '#/components/schemas/DataplaneOverview'
     MeshOverview:
       description: MeshOverview defines the projected state of a Mesh.
@@ -16296,6 +16308,18 @@ components:
     MeshOverviewWithMeta:
       allOf:
         - $ref: '#/components/schemas/Meta'
+        - type: object
+          properties:
+            creationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was created
+            modificationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was updated
         - $ref: '#/components/schemas/MeshOverview'
     DataplaneInsightItem:
       properties:
@@ -17034,6 +17058,18 @@ components:
     ZoneOverviewWithMeta:
       allOf:
         - $ref: '#/components/schemas/Meta'
+        - type: object
+          properties:
+            creationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was created
+            modificationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was updated
         - $ref: '#/components/schemas/ZoneOverview'
     ZoneOverview:
       description: ZoneOverview defines the projected state of a Zone.

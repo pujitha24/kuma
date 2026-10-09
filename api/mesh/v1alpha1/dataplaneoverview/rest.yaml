@@ -52,6 +52,18 @@ components:
     DataplaneOverviewWithMeta:
       allOf:
         - $ref: '/specs/base/specs/common/resource.yaml#/components/schemas/Meta'
+        - type: object
+          properties:
+            creationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was created
+            modificationTime:
+              type: string
+              format: date-time
+              readOnly: true
+              description: Time at which the resource was updated
         - $ref: '/specs/protoresources/dataplaneoverview/schema.yaml#/components/schemas/DataplaneOverview'
 
   responses:
